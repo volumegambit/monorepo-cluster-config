@@ -29,3 +29,10 @@ This repository holds Kubernetes configuration for applications deployed via Arg
   ```
 - Argo CD reconciles changes and deploys to the cluster.
 
+
+## Ingress & TLS
+- ingress-nginx is installed via Argo CD (LoadBalancer Service).
+- cert-manager issues Let's Encrypt certificates via HTTP-01 using ClusterIssuer letsencrypt-prod.
+- Replace example.com hosts in overlays with your domain and point DNS A/AAAA to the Ingress LB IP.
+- For wildcard certificates and fewer validations, switch to DNS-01 with your DNS provider (configure a new ClusterIssuer).
+

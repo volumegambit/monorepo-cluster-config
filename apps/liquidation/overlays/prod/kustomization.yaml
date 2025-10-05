@@ -5,3 +5,7 @@ resources:
   - ../../base
   - namespace.yaml
 # Images can be updated by CI via `kustomize edit set image`
+resources:
+  - ../../base
+  - namespace.yaml
+  - ingress.yaml
