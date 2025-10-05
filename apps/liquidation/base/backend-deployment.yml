@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: your-dockerhub-username/liquidation-calculator-backend:latest # Go backend image built via CI
+        ports:
+        - containerPort: 5001
+        envFrom:
+        - secretRef:
+            name: binance-api-keys

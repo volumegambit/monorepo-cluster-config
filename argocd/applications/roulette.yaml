@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: roulette-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/volumegambit/monorepo-cluster-config.git
+    path: apps/roulette/overlays/prod
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: roulette
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

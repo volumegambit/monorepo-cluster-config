@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: roulette-frontend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: roulette-frontend
+  template:
+    metadata:
+      labels:
+        app: roulette-frontend
+    spec:
+      containers:
+        - name: roulette-frontend
+          image: your-dockerhub-username/roulette-frontend:latest
+          ports:
+            - containerPort: 80
