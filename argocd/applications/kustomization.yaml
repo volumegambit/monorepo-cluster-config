@@ -3,3 +3,6 @@ kind: Kustomization
 resources:
   - liquidation.yaml
   - roulette.yaml
+  - ingress-nginx.yaml
+  - cert-manager.yaml
+  - cluster-issuer-app.yaml

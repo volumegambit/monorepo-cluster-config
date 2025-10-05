@@ -4,3 +4,7 @@ namespace: roulette
 resources:
   - ../../base
   - namespace.yaml
+resources:
+  - ../../base
+  - namespace.yaml
+  - ingress.yaml
