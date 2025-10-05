@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: roulette-backend
-          image: your-dockerhub-username/roulette-backend:latest
+          image: volumegambit/roulette-backend:latest
           env:
             - name: PORT
               value: "5002"
