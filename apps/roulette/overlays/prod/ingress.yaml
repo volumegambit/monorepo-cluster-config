@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - roulette.example.com
+        - roulette.volumegambit.com
       secretName: roulette-tls
   rules:
-    - host: roulette.example.com
+    - host: roulette.volumegambit.com
       http:
         paths:
           - path: /

@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - liquidation.example.com
+        - liquidation.volumegambit.com
       secretName: liquidation-tls
   rules:
-    - host: liquidation.example.com
+    - host: liquidation.volumegambit.com
       http:
         paths:
           - path: /
